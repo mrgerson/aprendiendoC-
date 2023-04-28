@@ -35,8 +35,11 @@ namespace Animales
             //mismo filtro pero utilizando sintaxis lamda
             var resul2 = animales.Animaless.Where(t => t.Color.Contains("Verde") && "AEIOUaeiou".Contains(t.Nombre[0])).ToList();
 
+            //Retorna los elementos de la colección ordenados por nombre 
+            var resul3 =  animales.Animaless.OrderBy(p => p.Nombre).ToList();
+
             // filtra todos los animales que sean de color verde que su nombre inicie con una vocal
-            FiltroAnimal(resul2);
+            FiltroAnimal(resul3);
 
 
         }
